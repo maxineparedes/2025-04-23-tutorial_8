@@ -22,5 +22,4 @@ is_leap <- function(input) {
   } else {
     return(FALSE)
   }
-
 }
