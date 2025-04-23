@@ -13,6 +13,12 @@
 #' isleap(2021) # returns FALSE
 
 is_leap <- function(input) {
+  if(input <= 0 || input %% 1 != 0) {
+    stop("input needs to be a positive non-zero value")
+  }
+  if (!is.numeric(input)) {
+    stop("input must be a numeric value")
+  }
   if (input %% 4 == 0) {
     return(TRUE)
   } else if (input %% 4 == 0 && input %% 100 == 0) {
